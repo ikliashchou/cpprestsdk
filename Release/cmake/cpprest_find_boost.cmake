@@ -2,6 +2,8 @@ function(cpprest_find_boost)
   if(TARGET cpprestsdk_boost_internal)
     return()
   endif()
+  
+  hunter_add_package(Boost)
 
   if(IOS)
     set(IOS_SOURCE_DIR "${PROJECT_SOURCE_DIR}/../Build_iOS")

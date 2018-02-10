@@ -3,6 +3,8 @@ function(cpprest_find_zlib)
     return()
   endif()
 
+  hunter_add_package(ZLIB)
+
   if(APPLE AND NOT IOS)
     # Prefer the homebrew version of zlib
     find_library(ZLIB_LIBRARY NAMES libz.a PATHS /usr/local/Cellar/zlib/1.2.8/lib NO_DEFAULT_PATH)

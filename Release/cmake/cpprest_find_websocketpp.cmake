@@ -3,6 +3,8 @@ function(cpprest_find_websocketpp)
     return()
   endif()
 
+  hunter_add_package(websocketpp)
+
   find_package(WEBSOCKETPP CONFIG QUIET)
   if(WEBSOCKETPP_FOUND)
     message("-- Found websocketpp version " ${WEBSOCKETPP_VERSION} " on system")

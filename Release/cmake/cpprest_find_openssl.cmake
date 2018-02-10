@@ -2,6 +2,8 @@ function(cpprest_find_openssl)
   if(TARGET cpprestsdk_openssl_internal)
     return()
   endif()
+  
+  hunter_add_package(OpenSSL)
 
   if(IOS)
     set(IOS_SOURCE_DIR "${PROJECT_SOURCE_DIR}/../Build_iOS")
